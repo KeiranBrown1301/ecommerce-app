@@ -1,7 +1,7 @@
 import React from "react";
 
-function Herobanner() {
-  return <div>Herobanner</div>;
+function HeroBanner() {
+  return <div>HeroBanner</div>;
 }
 
-export default Herobanner;
+export default HeroBanner;
