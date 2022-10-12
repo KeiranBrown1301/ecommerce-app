@@ -2,16 +2,16 @@ import React from "react";
 import { client } from "../lib/client";
 import { Product, FooterBanner, HeroBanner } from "../components";
 
-function Home() {
+function Home({ products, bannerData }) {
   return (
     <>
-      <HeroBanner />
+      <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
       <div className="products-heading">
         <h2>Best Selling Products</h2>
         <p>Speakers of many variations</p>
       </div>
       <div className="products-container">
-        {["Product1", "Product2"].map((product) => product)}
+        {products?.map((product) => product.name)}
       </div>
       <FooterBanner />
     </>
