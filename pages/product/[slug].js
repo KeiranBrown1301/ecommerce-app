@@ -1,5 +1,11 @@
 import React from "react";
 import { client, urlFor } from "../../lib/client";
+import {
+  AiOutlineMinus,
+  AiOutlinePlus,
+  AiFillStar,
+  AiOutlineStar,
+} from "react-icons/ai";
 
 function ProductDetails({ product, products }) {
   const { image, name, details, price } = product;
@@ -16,6 +22,12 @@ function ProductDetails({ product, products }) {
               <img src={urlFor(item)} className="" onMouseEnter="" />
             ))}
           </div> */}
+        </div>
+        <div className="product-details-desc">
+          <h1>{name}</h1>
+          <div className="reviews">
+            <div></div>
+          </div>
         </div>
       </div>
     </div>
