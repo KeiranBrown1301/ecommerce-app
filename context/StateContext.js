@@ -10,7 +10,16 @@ function StateContext({ children }) {
   const [totalQuantity, setTotalQuantity] = useState();
   const [qty, setQty] = useState(1);
 
-  return <Context.Provider>{children}</Context.Provider>;
+  return <Context.Provider
+    value={
+      showCart,
+      cartItems,
+      totalPrice,
+      totalQuantity,
+      qty,
+    }>
+    {children}
+    </Context.Provider>;
 }
 
 export default StateContext;
